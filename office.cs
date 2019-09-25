@@ -53,7 +53,7 @@ public class Startup
         lock(this) {
             if (msword == null) {
                 msword = new Word.Application();
-                msword.Visible = true;
+                msword.Visible = false;
                 msword.DisplayAlerts = Word.WdAlertLevel.wdAlertsNone;
                 msword.ChangeFileOpenDirectory(Directory.GetCurrentDirectory());
                 msword.AutomationSecurity = MsoAutomationSecurity.msoAutomationSecurityForceDisable;
