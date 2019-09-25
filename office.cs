@@ -53,7 +53,7 @@ public class Startup
         lock(this) {
             if (msword == null) {
                 msword = new Word.Application();
-                msword.Visible = true;
+                msword.Visible = false;
                 msword.DisplayAlerts = Word.WdAlertLevel.wdAlertsNone;
                 msword.ChangeFileOpenDirectory(Directory.GetCurrentDirectory());
                 msword.AutomationSecurity = MsoAutomationSecurity.msoAutomationSecurityForceDisable;
@@ -65,7 +65,7 @@ public class Startup
         lock (this) {
            if (msexcel == null) {
                 msexcel = new Excel.Application();
-                msexcel.Visible = true;
+                msexcel.Visible = false;
                 msexcel.DisplayAlerts = false;
                 msexcel.DefaultFilePath = Directory.GetCurrentDirectory();
                 msexcel.AutomationSecurity = MsoAutomationSecurity.msoAutomationSecurityForceDisable;
@@ -78,7 +78,7 @@ public class Startup
         lock(this) {
            if (mspowerpoint == null) {
                 mspowerpoint = new PowerPoint.Application();
-                mspowerpoint.Visible = MsoTriState.msoTrue;
+                mspowerpoint.Visible = false;
                 mspowerpoint.DisplayAlerts = PowerPoint.PpAlertLevel.ppAlertsNone;
                 mspowerpoint.AutomationSecurity = MsoAutomationSecurity.msoAutomationSecurityForceDisable;
                 
